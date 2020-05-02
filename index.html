@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Wrack A Mole</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- game title -->
+	<h1>
+		WRACK A MOLE!!!
+	</h1>
+
+	<!-- game rules -->
+	<table class="info">
+		<tbody>
+			<tr class="green-bg">
+				<td rowspan="2" class="info-level">Easy</td>
+				<td class="info-text">The game will run for 40 seconds</td>
+			</tr>
+			<tr class="green-bg">
+				<td class="info-text">The point given for each mole is 1</td>
+			</tr>
+			<tr class="orange-bg">
+				<td rowspan="2" class="info-level">Medium</td>
+				<td class="info-text">The game will run for 25 seconds</td>
+			</tr>
+			<tr class="orange-bg">
+				<td class="info-text">The point given for each mole is 2</td>
+			</tr>
+			<tr class="red-bg">
+				<td rowspan="2" class="info-level">Hard</td>
+				<td class="info-text">The game will run for 15 seconds</td>
+			</tr>
+			<tr class="red-bg">
+				<td class="info-text">The point given for each mole is 4</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button class="back">Back</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- start and info button -->
+	<div class="title">
+		<button class="play">
+			Play Game
+		</button>
+		<button class="rules">
+			Game Rules
+		</button>
+		<img src="gambar/tikus.png" alt="game-icon" />
+	</div>
+
+	<!-- level option -->
+	<div id="pilihLev">
+		<div class="levels">
+			<button type="button" value="easy" class="level easy">
+				LEVEL : EASY
+			</button>
+		</div>
+		<div class="levels">
+			<button type="button" value="medium" class="level medium">
+				LEVEL : MEDIUM
+			</button>
+		</div>
+		<div class="levels">
+			<button type="button" value="hard" class="level hard">
+				LEVEL : HARD
+			</button>
+		</div>
+	</div>
+
+	<!-- game display -->
+	<div class="container">
+		<table class="tableScore">
+			<tr class="tableRow">
+				<td colspan="2" class="tableData">
+					Your Score: <span class="nilai">0</span>
+				</td>
+			</tr>
+			<tr class="tableRow">
+				<td>
+					<button class="again">Play Again</button>
+				</td>
+				<td>
+					<button class="exit">Exit</button>
+				</td>
+			</tr>
+		</table>
+
+		<div class="tanah">
+			<div class="tikus"></div>
+		</div>
+		<div class="tanah">
+			<div class="tikus"></div>
+		</div>
+		<div class="tanah">
+			<div class="tikus"></div>
+		</div>
+		<div class="tanah">
+			<div class="tikus"></div>
+		</div>
+		<div class="tanah">
+			<div class="tikus"></div>
+		</div>
+		<div class="tanah">
+			<div class="tikus"></div>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

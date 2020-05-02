@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* set color */
+:root {
+	--background-color: #f6c857;
+	--primary-text-color: #f8f7f2;
+	--green-color: #007749;
+	--red-color: #ee2737;
+	--orange-color: #f46f0d;
+}
+
+/* set bakcground color */
+body {
+	background-color: var(--background-color);
+}
+
+/* button element */
+button {
+	width: 200px;
+	display: block;
+	border-radius: 5px;
+	height: auto;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+/* game title */
+h1 {
+	font-family: "Permanent Marker", cursive;
+	text-align: center;
+	font-size: 80px;
+	width: 100vw;
+	margin: 30px auto;
+	color: var(--primary-text-color);
+}
+
+/* opening display*/
+.title {
+	width: 50%;
+	height: auto;
+	display: flex;
+	margin: auto;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* play button */
+.title > .play,
+.title > .rules {
+	font-size: 20px;
+	padding: 15px;
+	align-self: center;
+	font-weight: bold;
+	margin: 10px;
+}
+
+/* set button when focus */
+.title > .play:hover {
+	background-color: #b65748;
+	color: var(--background-color);
+	border-color: #b65748;
+}
+
+.title > .rules:hover,
+.back:hover {
+	background-color: var(--orange-color);
+	color: var(--background-color);
+	border-color: var(--orange-color);
+}
+
+/* game icon */
+.title > img {
+	display: block;
+	margin: 30px auto;
+	width: 250px;
+}
+
+/* set opening display element when screen below 900px */
+@media screen and (max-width: 900px) {
+	.title {
+		width: 75%;
+	}
+}
+
+/* set opening display element when screen below 745px */
+@media screen and (max-width: 745px) {
+	h1 {
+		font-size: 60px;
+	}
+
+	.title button {
+		padding: 8px;
+	}
+}
+
+/* set opening display element when screen below 600px */
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	.title {
+		width: 80%;
+	}
+
+	.title > .play,
+	.title > .rules {
+		padding: 5px;
+		width: 150px;
+	}
+
+	.title > img {
+		width: 200px;
+	}
+}
+
+/* info table */
+.info {
+	margin: auto;
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
+	position: absolute;
+	z-index: 5;
+	width: 600px;
+	cursor: auto;
+	text-align: center;
+	border-collapse: collapse;
+	top: 180px;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+}
+
+/* game rules */
+.info tr > .info-level {
+	font-size: 55px;
+	text-align: center;
+	font-family: "Fredoka One", cursive;
+	padding: 15px;
+}
+
+.green-bg {
+	background-color: var(--green-color);
+}
+
+.orange-bg {
+	background-color: var(--orange-color);
+}
+
+.red-bg {
+	background-color: var(--red-color);
+}
+
+.info tr > .info-text {
+	font-size: 24px;
+	text-align: left;
+}
+
+.back {
+	margin: 15px auto;
+	padding: 15px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* set rules display when screen below 900px */
+@media screen and (max-width: 900px) {
+	.info {
+		width: 100%;
+		height: 60%;
+	}
+	.info tr > .info-level {
+		padding: 5px;
+	}
+}
+
+/* set rules display when screen below 745px */
+@media screen and (max-width: 745px) {
+	.info {
+		width: 100%;
+		height: 60%;
+		top: 150px;
+	}
+}
+
+/* set rules display when screen below 600px */
+@media screen and (max-width: 600px) {
+	.info {
+		width: 100%;
+		top: 100px;
+		height: 80%;
+	}
+
+	.info tr > .info-level {
+		font-size: 30px;
+	}
+}
+
+/* level container */
+#pilihLev {
+	margin: auto;
+	width: 100%;
+	height: auto;
+	display: none;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.levels {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 15px;
+}
+
+/* level button */
+.level {
+	margin: auto;
+	padding: 20px;
+	color: var(--primary-text-color);
+	transition: letter-spacing 1s;
+}
+
+/* set button when focus */
+.level:hover {
+	letter-spacing: 3px;
+}
+
+/* easy level button */
+.easy {
+	background-color: var(--green-color);
+	border-color: var(--green-color);
+}
+
+/* medium level button */
+.medium {
+	background-color: var(--orange-color);
+	border-color: var(--orange-color);
+}
+
+/* hard level button */
+.hard {
+	background-color: var(--red-color);
+	border-color: var(--red-color);
+}
+
+.rules {
+	color: #000000;
+}
+
+/* set hammer */
+.container {
+	width: 600px;
+	height: auto;
+	margin: auto;
+	cursor: url(../gambar/palu1.png), auto;
+	display: none;
+}
+
+/* set hammer when punch mole */
+.container:active {
+	cursor: url(../gambar/palu2.png), auto;
+}
+
+/* set sand */
+.tanah {
+	width: 190px;
+	height: 200px;
+	margin-top: 5px;
+	margin-left: 2px;
+	margin-right: 2px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.tanah::after {
+	content: "";
+	display: block;
+	width: 200px;
+	height: 100px;
+	background: url(../gambar/tanah.png) bottom center no-repeat;
+	position: absolute;
+	bottom: 0;
+	background-size: 80%;
+	bottom: -25px;
+}
+
+/* set mole */
+.tikus {
+	width: 100%;
+	height: 100%;
+	background: url(../gambar/tikus.png) bottom center no-repeat;
+	background-size: 60%;
+	position: absolute;
+	top: 100px;
+	transition: top 0.3s;
+}
+
+/* show the mole */
+.tanah.muncul > .tikus {
+	top: -22px;
+}
+
+/* result table */
+.tableScore {
+	margin: auto;
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
+	visibility: hidden;
+	position: absolute;
+	z-index: 2;
+	width: 600px;
+	height: 410px;
+	cursor: auto;
+	text-align: center;
+}
+
+.tableData {
+	font-size: 55px;
+	text-align: center;
+	font-family: "Fredoka One", cursive;
+}
+
+.tableRow > td > button {
+	display: block;
+	margin: auto;
+	padding: 15px;
+}
+
+.tableRow > td > button:hover {
+	color: var(--primary-text-color);
+}
+
+/* play again button */
+.tableRow > td > .again:hover {
+	background-color: var(--green-color);
+	border-color: var(--green-color);
+}
+
+/* exit button */
+.tableRow > td > .exit:hover {
+	background-color: var(--red-color);
+	border-color: var(--red-color);
+}
